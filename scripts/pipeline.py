@@ -8,6 +8,7 @@ import typing
 
 DataFrame = typing.Generic
 
+
 @njit
 def shorten(audio: np.array, reduce_by: float = 0.33) -> np.array:
     """
@@ -42,7 +43,13 @@ def get_data(file: str, signal: Callable, length: int = 234500) -> np.array:
 
 class Dataloader(Sequence):
     def __init__(
-        self, dataset: DataFrame, set_: str, batch_size: int, signal: Callable, script: bool= False) -> None:
+        self,
+        dataset: DataFrame,
+        set_: str,
+        batch_size: int,
+        signal: Callable,
+        script: bool = False,
+    ) -> None:
         self.dataset = dataset
         self.dataset.index = np.arange(self.dataset.shape[0])
         self.batch_size = batch_size
@@ -59,9 +66,7 @@ class Dataloader(Sequence):
         files = data["file_name"].values
         data = np.array(
             [
-                get_data(
-                    "{}/{}/{}".format(self.path,self.set_, file), self.signal
-                )
+                get_data("{}/{}/{}".format(self.path, self.set_, file), self.signal)
                 for file in files
             ]
         )

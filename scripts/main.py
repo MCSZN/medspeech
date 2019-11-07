@@ -34,17 +34,21 @@ model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accur
 print(model.summary())
 
 if __name__ == "__main__":
-	print('Executing training from script/main.py')
-	# read csv
-	dataset = pd.read_csv("../data/clean.csv")
-	dataset.prompt = dataset.prompt.astype("category")
-	# instantiate DataLoader
-	train_loader = pipeline.make_dl(dataset=dataset, set_="train", bs=32, signal=melspectrogram, script=True)
+    print("Executing training from script/main.py")
+    # read csv
+    dataset = pd.read_csv("../data/clean.csv")
+    dataset.prompt = dataset.prompt.astype("category")
+    # instantiate DataLoader
+    train_loader = pipeline.make_dl(
+        dataset=dataset, set_="train", bs=32, signal=melspectrogram, script=True
+    )
 
-	# fit the model on train loader data
-	model.fit_generator(train_loader, epochs=10, verbose=2, workers=2)
+    # fit the model on train loader data
+    model.fit_generator(train_loader, epochs=10, verbose=2, workers=2)
 
-	# instantiate test loader
-	test_loader = pipeline.make_dl(dataset=dataset, set_="test", bs=32, signal=melspectrogram, script=True)
-	# evaluate model on test data with the loader
-	metric = model.evaluate_generator(test_loader, workers=2, verbose=2)
+    # instantiate test loader
+    test_loader = pipeline.make_dl(
+        dataset=dataset, set_="test", bs=32, signal=melspectrogram, script=True
+    )
+    # evaluate model on test data with the loader
+    metric = model.evaluate_generator(test_loader, workers=2, verbose=2)

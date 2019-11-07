@@ -26,6 +26,10 @@ data
 	└── clean.csv
 ``
 
-You can either run the ```main.py``` in the scripts directly. Or you can run the ```medspeech.py``` file. Cleaning the data before running the models is crucial.
+You can either run the ```main.py``` in the scripts directly. 
+Or you can run the ```medspeech.py``` file. 
+Cleaning the data before running the models is crucial.
 
-We train and design our models with the main.py file. Load the data with ```pipeline.py```. Code formatted with Black. We pip install the requirement automatically with ```bash setup.sh```. 
+We train and design our models with the main.py file. 
+Load the data with ```pipeline.py```. 
+We pip install the requirement automatically with ```bash setup.sh```. 

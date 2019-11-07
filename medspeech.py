@@ -8,7 +8,7 @@ print("Dataloader loaded")
 model = main.model
 print("Model loaded to memory")
 
-path = input('Enter the path to csv\n')
+path = input("Enter the path to csv\n")
 
 dataset = pd.read_csv(path)
 dataset.prompt = dataset.prompt.astype("category")
