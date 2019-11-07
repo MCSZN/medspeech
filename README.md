@@ -24,13 +24,13 @@ data
 	│   ├── train =>'s101.wav', 's102.wav', ..., 's9999.wav'
 	│   └── validate => 'v101.wav', 'v102.wav', ..., 'v999.wav'
 	└── clean.csv
-```
+``
 
-You can either run the ** main.py ** in the scripts directly. 
-Or you can run the ** medspeech.py ** file. 
+You can either run the **main.py** in the scripts directly. 
+Or you can run the **medspeech.py** file. 
 Cleaning the data before running the models is crucial.
 
-We train and design our models with the main.py file. 
+We train and design our models with the **main.py** file. 
 Load the data with *pipeline.py*. 
 We pip install the requirement automatically with 
 ```bash 
