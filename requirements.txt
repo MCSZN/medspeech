@@ -1,0 +1,12 @@
+scipy
+numpy
+numba
+matplotlib
+tensorflow
+pandas
+keras
+larq
+ipython
+librosa
+mypy
+black
