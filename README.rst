@@ -5,13 +5,13 @@ This repo is the host of our research on speech recognition for a medical audio 
 
 To run the models you should map your data with a clean csv in the following format:
 
-+=======================================+
-| file_name       | prompt | set        |
-|-----------------|--------|------------|
-| "s101.wav"      | 1      | "train"    |
-| "t302.wav"      | 4      | "test"     |
-| "v302.wav"      | 2      | "validate" |
-+---------------------------------------+
++=======================================+<break>
+| file_name       | prompt | set        |<break>
+|-----------------|--------|------------|<break>
+| "s101.wav"      | 1      | "train"    |<break>
+| "t302.wav"      | 4      | "test"     |<break>
+| "v302.wav"      | 2      | "validate" |<break>
++---------------------------------------+<break>
 
 
 
