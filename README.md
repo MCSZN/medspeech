@@ -17,7 +17,7 @@ To run the models you should map your data with a clean csv in the following for
 
 Your data should be in the following arrangement:
 
-``
+``bash
 data
 	├── recordings
 	│   ├── test ['t101.wav', 't102.wav', ..., 't999.wav']
