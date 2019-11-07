@@ -17,14 +17,14 @@ To run the models you should map your data with a clean csv in the following for
 
 Your data should be in the following arrangement:
 
-``bash
+```bash
 data
 	├── recordings
 	│   ├── test ['t101.wav', 't102.wav', ..., 't999.wav']
 	│   ├── train ['s101.wav', 's102.wav', ..., 's9999.wav']
 	│   └── validate ['v101.wav', 'v102.wav', ..., 'v999.wav']
 	└── clean.csv
-``
+```
 
 You can either run the ```main.py``` in the scripts directly. Or you can run the ```medspeech.py``` file. Cleaning the data before running the models is crucial.
 
